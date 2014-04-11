@@ -13,12 +13,12 @@
         <li><%= link_to "Blocipedia", welcome_index_path %></li>
         <li><%= link_to "About", welcome_about_path %></li>
       </ul>
-         
+    </div>    
 <!-- Header and Nav -->
   
   <div class="row">
     <div class="large-3 columns">
-      <h1><img src="http://placehold.it/400x100&text=Logo" /></h1>
+      <h1><img src="http://placehold.it/400x100" /></h1>
     </div>
     <div class="large-9 columns">
       <ul class="inline-list right">
@@ -58,28 +58,6 @@
     </div>
     
   </div>
-    
-  
-  <!-- Footer -->
-  
-  <footer class="row">
-    <div class="large-12 columns">
-      <hr />
-      <div class="row">
-        <div class="large-6 columns">
-          <p>© Copyright no one at all. Go to town.</p>
-        </div>
-        <div class="large-6 columns">
-          <ul class="inline-list right">
-            <li><a href="#">Section 1</a></li>
-            <li><a href="#">Section 2</a></li>
-            <li><a href="#">Section 3</a></li>
-            <li><a href="#">Section 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div> 
-  </footer>
    
   <% if flash[:notice] %>
         <div class="alert alert-success">
@@ -101,4 +79,21 @@
       <%= yield %>
 
   </body>
+
+ 
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr />
+      <div class="row">
+        <div class="large-6 columns">
+          <p>© Copyright no one at all. Go to town.</p>
+        </div>
+        <div class="large-6 columns">
+          <ul class="inline-list right">
+          </ul>
+        </div>
+      </div>
+    </div> 
+  </footer>
+
 </html>
