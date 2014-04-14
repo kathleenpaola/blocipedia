@@ -1,19 +1,38 @@
 <!DOCTYPE html>
 <html>
+   
 
   <head>
-    <title>Blocipedia</title>
-    <%= stylesheet_link_tag    "application", :media => "all" %>
-    <%= javascript_include_tag "application" %>
-    <%= csrf_meta_tags %>
+    <div class='contain-to-grid'>
+      <nav class='top-bar' data-topbar data-options='is_hover: false'>
+        <ul class='title-area'>
+          <li class'name'>
+            <h1><a href='#'>Blocipedia</a></h1>
+          </li>
+          <li class='toggle-topbar menu-icon'><a href='#'>About</a>
+          </li>
+        </ul>
+
+
+        <section class='top-bar-section'>
+          <ul class='right'>
+            <li class='has-form'>
+              <a href='#'>Sign In</a>
+            </li>
+          </ul>
+
+          <ul class='left'>
+            <li><a href='#'>Left Nav Button</a></li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+
   </head>
-  <body>
-    <div class="container">
-      <ul class="nav nav-tabs">
-        <li><%= link_to "Blocipedia", welcome_index_path %></li>
-        <li><%= link_to "About", welcome_about_path %></li>
-      </ul>
-    </div>    
+ 
+
+ <body>
+      
 <!-- Header and Nav -->
   
   <div class="row">
@@ -21,12 +40,7 @@
       <h1><img src="http://placehold.it/400x100" /></h1>
     </div>
     <div class="large-9 columns">
-      <ul class="inline-list right">
-        <li><a href="#">Section 1</a></li>
-        <li><a href="#">Section 2</a></li>
-        <li><a href="#">Section 3</a></li>
-        <li><a href="#">Section 4</a></li>
-      </ul>
+     
     </div>
   </div>
   
@@ -56,9 +70,9 @@
       <p><img src="http://placehold.it/320x240&text=Ad" /></p>
         
     </div>
-    
-  </div>
-   
+    </div>
+   </div>
+
   <% if flash[:notice] %>
         <div class="alert alert-success">
           <button type="button" class="close" data-dismiss="alert">&times;</button>
