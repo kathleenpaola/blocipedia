@@ -2,7 +2,9 @@ Blocipedia::Application.routes.draw do
 
   devise_for :users
 
-  resources :topics
+  resources :topics, exclude: [:edit] do
+    resources :pages, except: [:index]
+  end
 
   resources :tags
 

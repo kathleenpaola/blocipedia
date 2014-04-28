@@ -1,0 +1,14 @@
+<h1>Pages#show</h1>
+<p>Find me in app/views/pages/show.html.erb</p>
+
+<%z @page.title %>
+
+<% @pages.each do |page| %>
+  <tr>
+      <td><%= page.body %></td>
+      <td><%= page.user_id %></td>
+      <td><%= page.created_at %></td>
+  </tr>
+
+
+<%z @page.title %>

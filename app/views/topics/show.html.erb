@@ -1,21 +1,9 @@
-<h1><%= @topic.name %></h1>
+<h1><%= @topic.title %></h1>
+<% if @pages.blank? %>
+  No Pages!
+<% else %>  
+  <% @pages.each do |page| %>
+    <%= page.title %>
+  <% end %>
+<% end %>
 
-<div class="row">
-  <div class="span8">
-    <p class="lead"><%= @topic.body %></p>
-    <% @tags.each do |tag| %>
-      <div class="media">
-        <div class="media-body">
-          <h4 class="media-heading">
-            <%= link_to tag.title, tag %>
-          </h4>
-        </div>
-      </div>
-    <% end %>
-  </div>
-  <div class="span4">
-    <% if can? :create, Tag %>
-      <%= link_to "New Tag", new_topic_tag_path(@topic), class: 'btn btn-large btn-block' %>
-    <% end %>
-  </div>
-</div>

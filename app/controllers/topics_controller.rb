@@ -4,11 +4,12 @@ class TopicsController < ApplicationController
   end
 
   def new
-    @topics = Topic.new
+    @topic = Topic.new
   end
 
   def show
     @topic = Topic.find(params[:id])
+    @pages = @topic.pages
     @tags = @topic.tags
   end
 

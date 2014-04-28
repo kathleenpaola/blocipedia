@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140406225045) do
+ActiveRecord::Schema.define(:version => 20140425001556) do
+
+  create_table "pages", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.integer  "user_id"
+    t.integer  "topic_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "tags", :force => true do |t|
     t.text     "body"
@@ -27,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20140406225045) do
     t.text     "body"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.boolean  "public"
   end
 
   create_table "users", :force => true do |t|
