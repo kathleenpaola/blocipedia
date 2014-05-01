@@ -9,6 +9,7 @@
 
  <body>
   <!-- Header and Nav -->
+  <section class='top-bar-section'>
     <div class='contain-to-grid'>
       <nav class='top-bar' data-topbar data-options='is_hover: false'>
         <ul class='title-area'>
@@ -19,13 +20,16 @@
           </li>
         </ul>
 
-
-        <section class='top-bar-section'>
-          <ul class='right'>
-            <li class='has-form'>
-              <a href='/users/sign_up'>Sign In</a>
-            </li>
-          </ul>
+        <ul class='right'>
+          <div class="pull-right user-info">
+            <% if current_user %>
+              Hello <%= current_user.email %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+            <% else %>
+              <%= link_to "Sign In", new_user_session_path %> or 
+              <%= link_to "Sign Up", new_user_registration_path %>
+            <% end %>
+          </div>
+        </ul>
 
           <ul class='left'>
             <li><a href='#'></a></li>
